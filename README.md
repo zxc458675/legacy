@@ -394,14 +394,14 @@
           Это только макет сайта: кнопка «Скачать .exe» — заглушка, установщика и файлов здесь нет.
         </p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="toast('Заглушка: установщик LegacySetup-26.3.exe не существует.')">Скачать LegacySetup-26.3.exe</button>
+          <button class="btn btn-primary" onclick="toast('Заглушка: установщик LegacySetup.exe не существует.')">Скачать LegacySetup.exe</button>
           <button class="btn" onclick="toast('Заглушка: раздел с функциями.')">Смотреть функции</button>
         </div>
       </div>
 
       <div class="hero-card">
         <div class="window-bar"><i></i><i></i><i></i></div>
-        <div class="mock-row"><span>LegacySetup-26.3.exe</span><span>SETUP</span></div>
+        <div class="mock-row"><span>LegacySetup.exe</span><span>SETUP</span></div>
         <div class="mock-row"><span>KillAura</span><span>ON</span></div>
         <div class="mock-row"><span>AutoTotem</span><span>ON</span></div>
         <div class="mock-row"><span>ESP / Chams</span><span>ON</span></div>
@@ -469,9 +469,9 @@
           </p>
 
           <div class="file-meta">
-            <span>Файл: <b>LegacySetup-26.3.exe</b></span>
+            <span>Файл: <b>LegacySetup.exe</b></span>
             <span>Платформа: <b>Windows 10/11 x64</b></span>
-            <span>Размер: <b>~84.6 MB</b></span>
+            <span>Размер: <b>2,94 MB</b></span>
             <span>Тип: <b>Installer</b></span>
           </div>
 

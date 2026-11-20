@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legacy 26.3 — Setup (.exe)</title>
+  <title>Legacy 26.3 — Setup</title>
   <style>
     :root {
       --bg: #070a12;
@@ -13,7 +13,6 @@
       --muted: #94a3b8;
       --accent: #7c5cff;
       --accent2: #22d3ee;
-      --danger: #ff5c7a;
       --radius: 20px;
     }
 
@@ -87,7 +86,7 @@
       gap: 8px;
     }
 
-    .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.11); }
+    .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.11); color: var(--text); }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), #4f46e5);
@@ -164,16 +163,8 @@
       filter: blur(24px);
     }
 
-    .window-bar {
-      display: flex; gap: 8px; margin-bottom: 18px;
-    }
-
-    .window-bar i {
-      width: 10px; height: 10px; border-radius: 50%;
-      background: rgba(255,255,255,.2);
-      display: block;
-    }
-
+    .window-bar { display: flex; gap: 8px; margin-bottom: 18px; }
+    .window-bar i { width: 10px; height: 10px; border-radius: 50%; display: block; }
     .window-bar i:nth-child(1) { background: #ff5c7a; }
     .window-bar i:nth-child(2) { background: #fbbf24; }
     .window-bar i:nth-child(3) { background: #34d399; }
@@ -188,33 +179,16 @@
       font-size: 14px;
     }
 
-    .mock-row span:last-child {
-      color: #34d399;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
+    .mock-row span:last-child { color: #34d399; font-size: 12px; font-weight: 800; }
     .mock-row:nth-child(3) span:last-child { color: #fbbf24; }
     .mock-row:nth-child(4) span:last-child { color: #22d3ee; }
 
     section { padding: 58px 0; }
-
     .section-head { margin-bottom: 26px; }
-
-    .section-head h2 {
-      margin: 0 0 8px;
-      font-size: clamp(26px, 4vw, 38px);
-      letter-spacing: -1px;
-    }
-
+    .section-head h2 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 38px); letter-spacing: -1px; }
     .section-head p { margin: 0; color: var(--muted); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .card {
       border: 1px solid var(--stroke);
       background: var(--card);
@@ -241,114 +215,34 @@
 
     .card h3 { margin: 0 0 8px; font-size: 16px; }
     .card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
-
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-
-    .tag {
-      font-size: 12px;
-      color: #cbd5e1;
-      border: 1px solid var(--stroke);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      padding: 5px 9px;
-    }
+    .tag { font-size: 12px; color: #cbd5e1; border: 1px solid var(--stroke); background: rgba(255,255,255,.04); border-radius: 999px; padding: 5px 9px; }
 
     .download {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
+      display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
       border: 1px solid var(--stroke);
-      background:
-        radial-gradient(500px 180px at 20% 0%, rgba(124,92,255,.22), transparent 60%),
-        rgba(255,255,255,.045);
-      border-radius: 26px;
-      padding: 30px;
-      margin-top: 10px;
+      background: radial-gradient(500px 180px at 20% 0%, rgba(124,92,255,.22), transparent 60%), rgba(255,255,255,.045);
+      border-radius: 26px; padding: 30px; margin-top: 10px;
     }
 
     .download h2 { margin: 0 0 8px; font-size: 30px; letter-spacing: -1px; }
     .download p { margin: 0; color: var(--muted); line-height: 1.6; }
-
     .download-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    .file-meta {
-      display: flex; gap: 10px; flex-wrap: wrap;
-      margin-top: 16px;
-      font-size: 12px;
-      color: #cbd5e1;
-    }
-
-    .file-meta span {
-      border: 1px solid var(--stroke);
-      background: rgba(0,0,0,.2);
-      padding: 6px 10px;
-      border-radius: 10px;
-    }
-
+    .file-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 12px; color: #cbd5e1; }
+    .file-meta span { border: 1px solid var(--stroke); background: rgba(0,0,0,.2); padding: 6px 10px; border-radius: 10px; }
     .file-meta b { color: #fff; font-weight: 700; }
 
-    .notice {
-      margin-top: 14px;
-      font-size: 12px;
-      color: #7c8aa5;
-    }
-
-    .req {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .req-item {
-      border: 1px solid var(--stroke);
-      background: rgba(255,255,255,.035);
-      border-radius: 16px;
-      padding: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .req-item b {
-      display: block;
-      color: var(--text);
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
+    .req { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+    .req-item { border: 1px solid var(--stroke); background: rgba(255,255,255,.035); border-radius: 16px; padding: 16px; font-size: 13px; color: var(--muted); }
+    .req-item b { display: block; color: var(--text); font-size: 13px; margin-bottom: 4px; }
 
     footer {
-      border-top: 1px solid var(--stroke);
-      padding: 26px 0;
-      color: var(--muted);
-      font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      border-top: 1px solid var(--stroke); padding: 26px 0; color: var(--muted); font-size: 13px;
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     }
-
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
-
-    .toast {
-      position: fixed;
-      left: 50%; bottom: 24px;
-      transform: translateX(-50%) translateY(20px);
-      opacity: 0;
-      background: rgba(15,23,42,.92);
-      border: 1px solid var(--stroke);
-      color: var(--text);
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-size: 14px;
-      transition: .25s;
-      pointer-events: none;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-    }
-
-    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; padding-top: 48px; }
@@ -380,7 +274,8 @@
         <a href="#visual">Visual</a>
         <a href="#download">Скачать Setup</a>
       </nav>
-      <button class="btn btn-primary" onclick="toast('Это заглушка. Реального .exe тут нет.')">Скачать .exe</button>
+      <!-- Прямая ссылка на скачивание -->
+      <a href="LegacySetup.exe" download class="btn btn-primary">Скачать .exe</a>
     </div>
   </header>
 
@@ -391,11 +286,12 @@
         <h1>Legacy <span class="grad">26.3</span><br>установщик .exe</h1>
         <p class="lead">
           Тёмный интерфейс, быстрый рендер и модульная архитектура.
-          Это только макет сайта: кнопка «Скачать .exe» — заглушка, установщика и файлов здесь нет.
+          Нажми кнопку скачивания, чтобы загрузить установщик для Windows.
         </p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="toast('Заглушка: установщик LegacySetup.exe не существует.')">Скачать LegacySetup.exe</button>
-          <button class="btn" onclick="toast('Заглушка: раздел с функциями.')">Смотреть функции</button>
+          <!-- Прямая ссылка на скачивание -->
+          <a href="LegacySetup.exe" download class="btn btn-primary">Скачать LegacySetup.exe</a>
+          <a href="#features" class="btn">Смотреть функции</a>
         </div>
       </div>
 
@@ -412,7 +308,7 @@
     <section id="features">
       <div class="section-head">
         <h2>Модули</h2>
-        <p>Категории из твоего списка — в виде карточек.</p>
+        <p>Категории и функции клиента.</p>
       </div>
       <div class="grid">
         <article class="card" id="combat">
@@ -463,10 +359,7 @@
       <div class="download">
         <div>
           <h2>Скачать Legacy 26.3 Setup</h2>
-          <p>
-            Установщик для Windows. В этом макете форма выбора версии, кнопка загрузки и чекбокс с соглашением
-            специально оставлены заглушкой — файл не скачивается.
-          </p>
+          <p>Установщик для Windows. Нажми кнопку ниже, чтобы начать загрузку файла.</p>
 
           <div class="file-meta">
             <span>Файл: <b>LegacySetup.exe</b></span>
@@ -474,12 +367,10 @@
             <span>Размер: <b>2,94 MB</b></span>
             <span>Тип: <b>Installer</b></span>
           </div>
-
-          <div class="notice">Ссылки ведут в никуда. Реальных .exe-файлов и установщиков на странице нет.</div>
         </div>
         <div class="download-actions">
-          <button class="btn btn-primary" onclick="toast('Заглушка: скачивание .exe отключено.')">Скачать .exe</button>
-          <button class="btn" onclick="toast('Заглушка: профили.')">Профили</button>
+          <!-- Прямая ссылка на скачивание -->
+          <a href="LegacySetup.exe" download class="btn btn-primary">Скачать .exe</a>
         </div>
       </div>
 
@@ -492,28 +383,8 @@
   </main>
 
   <footer class="wrap">
-    <span>© 2026 Legacy 26.3 — demo landing.</span>
+    <span>© 2026 Legacy 26.3</span>
     <span><a href="#">Docs</a></span>
   </footer>
-
-  <div class="toast" id="toast">Заглушка</div>
-
-  <script>
-    let toastTimer;
-    function toast(message) {
-      const el = document.getElementById('toast');
-      el.textContent = message;
-      el.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
-    }
-
-    document.querySelectorAll('a[href="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        toast('Это демо-ссылка. Реального перехода нет.');
-      });
-    });
-  </script>
 </body>
 </html>
